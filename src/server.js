@@ -1,6 +1,6 @@
 import express, { json, urlencoded } from "express";
 
-import { authRouter, examRouter } from "./routes/index.js";
+import { authRouter, authUserRouter, examRouter } from "./routes/index.js";
 // import { protect } from "./routes/auth.js";
 
 const app = express();
@@ -16,6 +16,7 @@ app.route("/").get((_req, res) => {
 // app.use("/", router);
 //
 app.use("/api/auth", authRouter);
+app.use("/api/authusers", authUserRouter);
 // app.use("/api/exams", protect, apiRouter);
 app.use("/api/exams", examRouter);
 

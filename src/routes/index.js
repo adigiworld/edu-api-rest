@@ -1,4 +1,4 @@
-import { authRouter } from "./auth.js";
+import { authRouter, authUserRouter } from "./auth.js";
 import { examRouter } from "./exams.js";
 
-export { authRouter, examRouter }
+export { authRouter, authUserRouter, examRouter }
